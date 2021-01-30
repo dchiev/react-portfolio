@@ -1,5 +1,9 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import Projects from "./components/Projects";
+import Main from "./components/Main";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "bootswatch/dist/slate/bootstrap.min.css";
 
 export default function App() {
   return (
@@ -11,7 +15,7 @@ export default function App() {
               <Link to="/">Home</Link>
             </li>
             <li>
-              <Link to="/about">About</Link>
+              <Link to="/projects">Projects</Link>
             </li>
             <li>
               <Link to="/users">Users</Link>
@@ -22,14 +26,14 @@ export default function App() {
         {/* A <Switch> looks through its children <Route>s and
             renders the first one that matches the current URL. */}
         <Switch>
-          <Route path="/about">
-            <About />
+          <Route path="/projects">
+            <Projects />
           </Route>
           <Route path="/users">
             <Users />
           </Route>
           <Route path="/">
-            <Home />
+            <Main />
           </Route>
         </Switch>
       </div>
