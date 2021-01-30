@@ -2,6 +2,7 @@ import React from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Projects from "./components/Projects";
 import Main from "./components/Main";
+import Personal from "./components/Personal";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootswatch/dist/slate/bootstrap.min.css";
 
@@ -18,7 +19,7 @@ export default function App() {
               <Link to="/projects">Projects</Link>
             </li>
             <li>
-              <Link to="/users">Users</Link>
+              <Link to="/about">About</Link>
             </li>
           </ul>
         </nav>
@@ -29,8 +30,8 @@ export default function App() {
           <Route path="/projects">
             <Projects />
           </Route>
-          <Route path="/users">
-            <Users />
+          <Route path="/about">
+            <Personal />
           </Route>
           <Route path="/">
             <Main />
